@@ -29,7 +29,7 @@ namespace XE08.Forms
         {
             var now = DateTime.Now;
             string date = now.ToString("yyyy.MM.dd");
-            string time = now.ToString("HH::mm:ss");
+            string time = now.ToString("HH:mm:ss");
             this.date_label.Text = date;
             this.time_label.Text = time;
         }
@@ -38,7 +38,7 @@ namespace XE08.Forms
         {
             var now = DateTime.Now;
             string date = now.ToString("yyyy.MM.dd");
-            string time = now.ToString("HH::mm:ss");
+            string time = now.ToString("HH:mm:ss");
             this.date_label.Text = date;
             this.time_label.Text = time;
         }
