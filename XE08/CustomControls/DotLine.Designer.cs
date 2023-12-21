@@ -69,9 +69,9 @@ namespace XE08.CustomControls
         /// </summary>
         [Browsable (true)]
         public Brush DotLineBrush { get; set; } = Brushes.DodgerBlue;
-
+        
         /// <summary>
-        /// 绘制箭头
+        /// 绘制点线
         /// </summary>
         /// <param name="e"></param>
         protected override void OnPaint(PaintEventArgs e)
@@ -87,6 +87,11 @@ namespace XE08.CustomControls
                 {
                     e.Graphics.DrawLine(pen, new Point(x, y), new Point(x, y += DotLineLen));
                     y += GapLen;
+                }
+
+                if(y < this.Height)
+                {
+                    e.Graphics.DrawLine(pen, new Point(x, y), new Point(x, this.Height));
                 }
             }             
         }

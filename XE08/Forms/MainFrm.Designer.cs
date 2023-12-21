@@ -48,12 +48,12 @@ namespace XE08.Forms
             this.check_item_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.right_top_panel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.splitLine1 = new XE08.CustomControls.SplitLine();
             this.title_label = new System.Windows.Forms.Label();
-            this.header_split_line = new XE08.CustomControls.SplitLine();
             this.refresh_timer = new System.Windows.Forms.Timer(this.components);
+            this.splitLine1 = new XE08.CustomControls.SplitLine();
+            this.dotLine1 = new XE08.CustomControls.DotLine();
+            this.header_split_line = new XE08.CustomControls.SplitLine();
             this.header.SuspendLayout();
             this.header_tab_layout.SuspendLayout();
             this.header_right.SuspendLayout();
@@ -260,23 +260,14 @@ namespace XE08.Forms
             // 
             // right_top_panel
             // 
-            this.right_top_panel.Controls.Add(this.panel2);
             this.right_top_panel.Controls.Add(this.flowLayoutPanel1);
+            this.right_top_panel.Controls.Add(this.dotLine1);
             this.right_top_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.right_top_panel.Location = new System.Drawing.Point(0, 0);
             this.right_top_panel.Margin = new System.Windows.Forms.Padding(0);
             this.right_top_panel.Name = "right_top_panel";
             this.right_top_panel.Size = new System.Drawing.Size(532, 318);
             this.right_top_panel.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 279);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(532, 39);
-            this.panel2.TabIndex = 2;
             // 
             // flowLayoutPanel1
             // 
@@ -289,15 +280,6 @@ namespace XE08.Forms
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(532, 71);
             this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // splitLine1
-            // 
-            this.splitLine1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.splitLine1.BackColor = System.Drawing.Color.Orange;
-            this.splitLine1.Location = new System.Drawing.Point(3, 65);
-            this.splitLine1.Name = "splitLine1";
-            this.splitLine1.Size = new System.Drawing.Size(170, 3);
-            this.splitLine1.TabIndex = 1;
             // 
             // title_label
             // 
@@ -312,6 +294,33 @@ namespace XE08.Forms
             this.title_label.Text = "测试数据：";
             this.title_label.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // refresh_timer
+            // 
+            this.refresh_timer.Enabled = true;
+            this.refresh_timer.Interval = 950;
+            this.refresh_timer.Tick += new System.EventHandler(this.refresh_timer_Tick);
+            // 
+            // splitLine1
+            // 
+            this.splitLine1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.splitLine1.BackColor = System.Drawing.Color.Orange;
+            this.splitLine1.Location = new System.Drawing.Point(3, 65);
+            this.splitLine1.Name = "splitLine1";
+            this.splitLine1.Size = new System.Drawing.Size(170, 3);
+            this.splitLine1.TabIndex = 1;
+            // 
+            // dotLine1
+            // 
+            this.dotLine1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dotLine1.DotLineLen = 15;
+            this.dotLine1.DotLineWidth = 3;
+            this.dotLine1.GapLen = 5;
+            this.dotLine1.Location = new System.Drawing.Point(254, 71);
+            this.dotLine1.Margin = new System.Windows.Forms.Padding(4);
+            this.dotLine1.Name = "dotLine1";
+            this.dotLine1.Size = new System.Drawing.Size(19, 243);
+            this.dotLine1.TabIndex = 2;
+            // 
             // header_split_line
             // 
             this.header_split_line.BackColor = System.Drawing.Color.DodgerBlue;
@@ -321,15 +330,9 @@ namespace XE08.Forms
             this.header_split_line.Size = new System.Drawing.Size(1182, 3);
             this.header_split_line.TabIndex = 0;
             // 
-            // refresh_timer
-            // 
-            this.refresh_timer.Enabled = true;
-            this.refresh_timer.Interval = 950;
-            this.refresh_timer.Tick += new System.EventHandler(this.refresh_timer_Tick);
-            // 
             // MainFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1182, 753);
@@ -374,11 +377,11 @@ namespace XE08.Forms
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Timer refresh_timer;
         private System.Windows.Forms.Panel right_top_panel;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox logo;
         private DataGridViewTextBoxColumn check_flow_col;
         private DataGridViewTextBoxColumn check_item_col;
         private DataGridViewTextBoxColumn status_col;
+        private CustomControls.DotLine dotLine1;
     }
 }
 
