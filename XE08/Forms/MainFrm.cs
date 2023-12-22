@@ -15,14 +15,6 @@ namespace XE08.Forms
         public MainFrm()
         {
             InitializeComponent();
-
-            for(int i =0;i < flow_dgv.Columns.Count; i++)
-            {
-                var style = this.flow_dgv.Columns[i].HeaderCell.Style;
-                style.BackColor = Color.DodgerBlue;
-                style.ForeColor = Color.White;
-                style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            }
         }
 
         private void MainFrm_Load(object sender, EventArgs e)

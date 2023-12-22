@@ -32,6 +32,7 @@ namespace XE08.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             this.header = new System.Windows.Forms.Panel();
             this.header_tab_layout = new System.Windows.Forms.TableLayoutPanel();
@@ -50,20 +51,20 @@ namespace XE08.Forms
             this.right_top_panel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.title_label = new System.Windows.Forms.Label();
-            this.refresh_timer = new System.Windows.Forms.Timer(this.components);
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
             this.dotLine1 = new XE08.CustomControls.DotLine();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.splitLine1 = new XE08.CustomControls.SplitLine();
+            this.title_label = new System.Windows.Forms.Label();
             this.header_split_line = new XE08.CustomControls.SplitLine();
+            this.refresh_timer = new System.Windows.Forms.Timer(this.components);
             this.header.SuspendLayout();
             this.header_tab_layout.SuspendLayout();
             this.header_right.SuspendLayout();
@@ -74,10 +75,10 @@ namespace XE08.Forms
             ((System.ComponentModel.ISupportInitialize)(this.flow_dgv)).BeginInit();
             this.right_top_panel.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // header
@@ -228,6 +229,14 @@ namespace XE08.Forms
             this.flow_dgv.BackgroundColor = System.Drawing.SystemColors.Control;
             this.flow_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.flow_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.flow_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.flow_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.flow_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.check_flow_col,
@@ -310,6 +319,33 @@ namespace XE08.Forms
             this.label4.TabIndex = 0;
             this.label4.Text = "标签信息:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(152, 0);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 3;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(380, 50);
+            this.tableLayoutPanel5.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Location = new System.Drawing.Point(0, 12);
+            this.label5.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(340, 25);
+            this.label5.TabIndex = 0;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel1
             // 
@@ -394,6 +430,18 @@ namespace XE08.Forms
             this.tableLayoutPanel3.Size = new System.Drawing.Size(265, 197);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
+            // dotLine1
+            // 
+            this.dotLine1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dotLine1.DotLineLen = 15;
+            this.dotLine1.DotLineWidth = 3;
+            this.dotLine1.GapLen = 5;
+            this.dotLine1.Location = new System.Drawing.Point(264, 0);
+            this.dotLine1.Margin = new System.Windows.Forms.Padding(0);
+            this.dotLine1.Name = "dotLine1";
+            this.dotLine1.Size = new System.Drawing.Size(3, 197);
+            this.dotLine1.TabIndex = 2;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.splitLine1);
@@ -405,6 +453,15 @@ namespace XE08.Forms
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(532, 71);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // splitLine1
+            // 
+            this.splitLine1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.splitLine1.BackColor = System.Drawing.Color.Orange;
+            this.splitLine1.Location = new System.Drawing.Point(3, 65);
+            this.splitLine1.Name = "splitLine1";
+            this.splitLine1.Size = new System.Drawing.Size(170, 3);
+            this.splitLine1.TabIndex = 1;
             // 
             // title_label
             // 
@@ -419,60 +476,6 @@ namespace XE08.Forms
             this.title_label.Text = "测试数据：";
             this.title_label.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // refresh_timer
-            // 
-            this.refresh_timer.Enabled = true;
-            this.refresh_timer.Interval = 950;
-            this.refresh_timer.Tick += new System.EventHandler(this.refresh_timer_Tick);
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(152, 0);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(380, 50);
-            this.tableLayoutPanel5.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(0, 12);
-            this.label5.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(340, 25);
-            this.label5.TabIndex = 0;
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dotLine1
-            // 
-            this.dotLine1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dotLine1.DotLineLen = 15;
-            this.dotLine1.DotLineWidth = 3;
-            this.dotLine1.GapLen = 5;
-            this.dotLine1.Location = new System.Drawing.Point(264, 0);
-            this.dotLine1.Margin = new System.Windows.Forms.Padding(0);
-            this.dotLine1.Name = "dotLine1";
-            this.dotLine1.Size = new System.Drawing.Size(3, 197);
-            this.dotLine1.TabIndex = 2;
-            // 
-            // splitLine1
-            // 
-            this.splitLine1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.splitLine1.BackColor = System.Drawing.Color.Orange;
-            this.splitLine1.Location = new System.Drawing.Point(3, 65);
-            this.splitLine1.Name = "splitLine1";
-            this.splitLine1.Size = new System.Drawing.Size(170, 3);
-            this.splitLine1.TabIndex = 1;
-            // 
             // header_split_line
             // 
             this.header_split_line.BackColor = System.Drawing.Color.DodgerBlue;
@@ -482,9 +485,15 @@ namespace XE08.Forms
             this.header_split_line.Size = new System.Drawing.Size(1182, 3);
             this.header_split_line.TabIndex = 0;
             // 
+            // refresh_timer
+            // 
+            this.refresh_timer.Enabled = true;
+            this.refresh_timer.Interval = 950;
+            this.refresh_timer.Tick += new System.EventHandler(this.refresh_timer_Tick);
+            // 
             // MainFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1182, 753);
@@ -507,10 +516,10 @@ namespace XE08.Forms
             ((System.ComponentModel.ISupportInitialize)(this.flow_dgv)).EndInit();
             this.right_top_panel.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
