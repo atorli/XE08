@@ -48,7 +48,6 @@ namespace XE08.Forms
             this.check_flow_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.check_item_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.right_top_panel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -90,10 +89,10 @@ namespace XE08.Forms
             this.label25 = new System.Windows.Forms.Label();
             this.title_label = new System.Windows.Forms.Label();
             this.refresh_timer = new System.Windows.Forms.Timer(this.components);
-            this.splitLine1 = new XE08.CustomControls.SplitLine();
             this.dotLine1 = new XE08.CustomControls.DotLine();
             this.header_split_line = new XE08.CustomControls.SplitLine();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.header.SuspendLayout();
             this.header_tab_layout.SuspendLayout();
             this.header_right.SuspendLayout();
@@ -102,7 +101,6 @@ namespace XE08.Forms
             this.body_tab_layout.SuspendLayout();
             this.body_right_tab_layout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flow_dgv)).BeginInit();
-            this.right_top_panel.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -117,7 +115,8 @@ namespace XE08.Forms
             this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // header
@@ -249,7 +248,7 @@ namespace XE08.Forms
             this.body_right_tab_layout.ColumnCount = 1;
             this.body_right_tab_layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.body_right_tab_layout.Controls.Add(this.flow_dgv, 0, 1);
-            this.body_right_tab_layout.Controls.Add(this.right_top_panel, 0, 0);
+            this.body_right_tab_layout.Controls.Add(this.tableLayoutPanel15, 0, 0);
             this.body_right_tab_layout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.body_right_tab_layout.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.body_right_tab_layout.Location = new System.Drawing.Point(650, 0);
@@ -320,18 +319,6 @@ namespace XE08.Forms
             this.status_col.Name = "status_col";
             this.status_col.ReadOnly = true;
             // 
-            // right_top_panel
-            // 
-            this.right_top_panel.Controls.Add(this.tableLayoutPanel4);
-            this.right_top_panel.Controls.Add(this.tableLayoutPanel1);
-            this.right_top_panel.Controls.Add(this.flowLayoutPanel1);
-            this.right_top_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.right_top_panel.Location = new System.Drawing.Point(0, 0);
-            this.right_top_panel.Margin = new System.Windows.Forms.Padding(0);
-            this.right_top_panel.Name = "right_top_panel";
-            this.right_top_panel.Size = new System.Drawing.Size(532, 318);
-            this.right_top_panel.TabIndex = 1;
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
@@ -341,12 +328,12 @@ namespace XE08.Forms
             this.tableLayoutPanel4.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 268);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 264);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(532, 50);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(526, 48);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
             // label4
@@ -354,7 +341,7 @@ namespace XE08.Forms
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Location = new System.Drawing.Point(43, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 50);
+            this.label4.Size = new System.Drawing.Size(106, 48);
             this.label4.TabIndex = 0;
             this.label4.Text = "标签信息:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -372,17 +359,17 @@ namespace XE08.Forms
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(380, 50);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(374, 48);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(0, 12);
+            this.label5.Location = new System.Drawing.Point(0, 11);
             this.label5.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(340, 25);
+            this.label5.Size = new System.Drawing.Size(334, 25);
             this.label5.TabIndex = 0;
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -395,13 +382,13 @@ namespace XE08.Forms
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.dotLine1, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 71);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 62);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(532, 197);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(526, 202);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // tableLayoutPanel2
@@ -425,7 +412,7 @@ namespace XE08.Forms
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(265, 197);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(262, 202);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel8
@@ -436,24 +423,24 @@ namespace XE08.Forms
             this.tableLayoutPanel8.Controls.Add(this.label10, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.label11, 1, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(152, 140);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(152, 144);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 3;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(113, 57);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(110, 58);
             this.tableLayoutPanel8.TabIndex = 4;
             // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(0, 13);
+            this.label10.Location = new System.Drawing.Point(0, 14);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 30);
+            this.label10.Size = new System.Drawing.Size(65, 30);
             this.label10.TabIndex = 0;
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -461,7 +448,7 @@ namespace XE08.Forms
             // 
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.Location = new System.Drawing.Point(68, 13);
+            this.label11.Location = new System.Drawing.Point(65, 14);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 30);
@@ -477,24 +464,24 @@ namespace XE08.Forms
             this.tableLayoutPanel7.Controls.Add(this.label8, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.label9, 1, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(152, 85);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(152, 87);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 3;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(113, 55);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(110, 57);
             this.tableLayoutPanel7.TabIndex = 4;
             // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(0, 12);
+            this.label8.Location = new System.Drawing.Point(0, 13);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 30);
+            this.label8.Size = new System.Drawing.Size(65, 30);
             this.label8.TabIndex = 0;
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -502,7 +489,7 @@ namespace XE08.Forms
             // 
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(68, 12);
+            this.label9.Location = new System.Drawing.Point(65, 13);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 30);
@@ -515,7 +502,7 @@ namespace XE08.Forms
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(43, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 55);
+            this.label1.Size = new System.Drawing.Size(106, 57);
             this.label1.TabIndex = 0;
             this.label1.Text = "上升时间:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -523,9 +510,9 @@ namespace XE08.Forms
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(43, 85);
+            this.label2.Location = new System.Drawing.Point(43, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 55);
+            this.label2.Size = new System.Drawing.Size(106, 57);
             this.label2.TabIndex = 1;
             this.label2.Text = "上升电流:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -533,9 +520,9 @@ namespace XE08.Forms
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(43, 140);
+            this.label3.Location = new System.Drawing.Point(43, 144);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 57);
+            this.label3.Size = new System.Drawing.Size(106, 58);
             this.label3.TabIndex = 2;
             this.label3.Text = "交付位置:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -555,17 +542,17 @@ namespace XE08.Forms
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(113, 55);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(110, 57);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(0, 12);
+            this.label6.Location = new System.Drawing.Point(0, 13);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 30);
+            this.label6.Size = new System.Drawing.Size(65, 30);
             this.label6.TabIndex = 0;
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -573,7 +560,7 @@ namespace XE08.Forms
             // 
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(68, 12);
+            this.label7.Location = new System.Drawing.Point(65, 13);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 30);
@@ -596,7 +583,7 @@ namespace XE08.Forms
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel13, 2, 2);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel14, 2, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(266, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(263, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
@@ -604,7 +591,7 @@ namespace XE08.Forms
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(266, 197);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(263, 202);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel11
@@ -615,24 +602,24 @@ namespace XE08.Forms
             this.tableLayoutPanel11.Controls.Add(this.label18, 0, 1);
             this.tableLayoutPanel11.Controls.Add(this.label19, 1, 1);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(40, 140);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(40, 144);
             this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 3;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(113, 57);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(111, 58);
             this.tableLayoutPanel11.TabIndex = 5;
             // 
             // label18
             // 
             this.label18.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Location = new System.Drawing.Point(0, 13);
+            this.label18.Location = new System.Drawing.Point(0, 14);
             this.label18.Margin = new System.Windows.Forms.Padding(0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(68, 30);
+            this.label18.Size = new System.Drawing.Size(66, 30);
             this.label18.TabIndex = 0;
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -640,7 +627,7 @@ namespace XE08.Forms
             // 
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label19.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label19.Location = new System.Drawing.Point(68, 13);
+            this.label19.Location = new System.Drawing.Point(66, 14);
             this.label19.Margin = new System.Windows.Forms.Padding(0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(45, 30);
@@ -663,17 +650,17 @@ namespace XE08.Forms
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(113, 55);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(111, 57);
             this.tableLayoutPanel9.TabIndex = 4;
             // 
             // label14
             // 
             this.label14.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(0, 12);
+            this.label14.Location = new System.Drawing.Point(0, 13);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 30);
+            this.label14.Size = new System.Drawing.Size(66, 30);
             this.label14.TabIndex = 0;
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -681,7 +668,7 @@ namespace XE08.Forms
             // 
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(68, 12);
+            this.label15.Location = new System.Drawing.Point(66, 13);
             this.label15.Margin = new System.Windows.Forms.Padding(0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(45, 30);
@@ -695,7 +682,7 @@ namespace XE08.Forms
             this.label12.Location = new System.Drawing.Point(40, 0);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(113, 30);
+            this.label12.Size = new System.Drawing.Size(111, 30);
             this.label12.TabIndex = 0;
             this.label12.Text = "最小值:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -704,10 +691,10 @@ namespace XE08.Forms
             // 
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(153, 0);
+            this.label13.Location = new System.Drawing.Point(151, 0);
             this.label13.Margin = new System.Windows.Forms.Padding(0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(113, 30);
+            this.label13.Size = new System.Drawing.Size(112, 30);
             this.label13.TabIndex = 1;
             this.label13.Text = "最大值:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -720,24 +707,24 @@ namespace XE08.Forms
             this.tableLayoutPanel10.Controls.Add(this.label16, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.label17, 1, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(40, 85);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(40, 87);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 3;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(113, 55);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(111, 57);
             this.tableLayoutPanel10.TabIndex = 5;
             // 
             // label16
             // 
             this.label16.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(0, 12);
+            this.label16.Location = new System.Drawing.Point(0, 13);
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 30);
+            this.label16.Size = new System.Drawing.Size(66, 30);
             this.label16.TabIndex = 0;
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -745,7 +732,7 @@ namespace XE08.Forms
             // 
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label17.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label17.Location = new System.Drawing.Point(68, 12);
+            this.label17.Location = new System.Drawing.Point(66, 13);
             this.label17.Margin = new System.Windows.Forms.Padding(0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(45, 30);
@@ -761,24 +748,24 @@ namespace XE08.Forms
             this.tableLayoutPanel12.Controls.Add(this.label20, 0, 1);
             this.tableLayoutPanel12.Controls.Add(this.label21, 1, 1);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(153, 30);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(151, 30);
             this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 3;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(113, 55);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(112, 57);
             this.tableLayoutPanel12.TabIndex = 6;
             // 
             // label20
             // 
             this.label20.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(0, 12);
+            this.label20.Location = new System.Drawing.Point(0, 13);
             this.label20.Margin = new System.Windows.Forms.Padding(0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(68, 30);
+            this.label20.Size = new System.Drawing.Size(67, 30);
             this.label20.TabIndex = 0;
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -786,7 +773,7 @@ namespace XE08.Forms
             // 
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label21.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label21.Location = new System.Drawing.Point(68, 12);
+            this.label21.Location = new System.Drawing.Point(67, 13);
             this.label21.Margin = new System.Windows.Forms.Padding(0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(45, 30);
@@ -802,24 +789,24 @@ namespace XE08.Forms
             this.tableLayoutPanel13.Controls.Add(this.label22, 0, 1);
             this.tableLayoutPanel13.Controls.Add(this.label23, 1, 1);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(153, 85);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(151, 87);
             this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 3;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(113, 55);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(112, 57);
             this.tableLayoutPanel13.TabIndex = 7;
             // 
             // label22
             // 
             this.label22.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Location = new System.Drawing.Point(0, 12);
+            this.label22.Location = new System.Drawing.Point(0, 13);
             this.label22.Margin = new System.Windows.Forms.Padding(0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(68, 30);
+            this.label22.Size = new System.Drawing.Size(67, 30);
             this.label22.TabIndex = 0;
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -827,7 +814,7 @@ namespace XE08.Forms
             // 
             this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label23.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label23.Location = new System.Drawing.Point(68, 12);
+            this.label23.Location = new System.Drawing.Point(67, 13);
             this.label23.Margin = new System.Windows.Forms.Padding(0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(45, 30);
@@ -843,24 +830,24 @@ namespace XE08.Forms
             this.tableLayoutPanel14.Controls.Add(this.label24, 0, 1);
             this.tableLayoutPanel14.Controls.Add(this.label25, 1, 1);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(153, 140);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(151, 144);
             this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 3;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(113, 57);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(112, 58);
             this.tableLayoutPanel14.TabIndex = 8;
             // 
             // label24
             // 
             this.label24.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.Location = new System.Drawing.Point(0, 13);
+            this.label24.Location = new System.Drawing.Point(0, 14);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(68, 30);
+            this.label24.Size = new System.Drawing.Size(67, 30);
             this.label24.TabIndex = 0;
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -868,7 +855,7 @@ namespace XE08.Forms
             // 
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label25.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label25.Location = new System.Drawing.Point(68, 13);
+            this.label25.Location = new System.Drawing.Point(67, 14);
             this.label25.Margin = new System.Windows.Forms.Padding(0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(45, 30);
@@ -878,13 +865,13 @@ namespace XE08.Forms
             // 
             // title_label
             // 
-            this.title_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.title_label.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.title_label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.title_label.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.title_label.ForeColor = System.Drawing.Color.Orange;
-            this.title_label.Location = new System.Drawing.Point(0, 12);
+            this.title_label.Location = new System.Drawing.Point(0, 0);
             this.title_label.Margin = new System.Windows.Forms.Padding(0);
             this.title_label.Name = "title_label";
-            this.title_label.Size = new System.Drawing.Size(230, 50);
+            this.title_label.Size = new System.Drawing.Size(190, 62);
             this.title_label.TabIndex = 0;
             this.title_label.Text = "测试数据：";
             this.title_label.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -895,24 +882,16 @@ namespace XE08.Forms
             this.refresh_timer.Interval = 950;
             this.refresh_timer.Tick += new System.EventHandler(this.refresh_timer_Tick);
             // 
-            // splitLine1
-            // 
-            this.splitLine1.BackColor = System.Drawing.Color.Orange;
-            this.splitLine1.Location = new System.Drawing.Point(3, 65);
-            this.splitLine1.Name = "splitLine1";
-            this.splitLine1.Size = new System.Drawing.Size(170, 3);
-            this.splitLine1.TabIndex = 1;
-            // 
             // dotLine1
             // 
             this.dotLine1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dotLine1.DotLineLen = 15;
             this.dotLine1.DotLineWidth = 1;
             this.dotLine1.GapLen = 5;
-            this.dotLine1.Location = new System.Drawing.Point(265, 0);
+            this.dotLine1.Location = new System.Drawing.Point(262, 0);
             this.dotLine1.Margin = new System.Windows.Forms.Padding(0);
             this.dotLine1.Name = "dotLine1";
-            this.dotLine1.Size = new System.Drawing.Size(1, 197);
+            this.dotLine1.Size = new System.Drawing.Size(1, 202);
             this.dotLine1.TabIndex = 2;
             // 
             // header_split_line
@@ -924,17 +903,38 @@ namespace XE08.Forms
             this.header_split_line.Size = new System.Drawing.Size(1182, 3);
             this.header_split_line.TabIndex = 0;
             // 
-            // flowLayoutPanel1
+            // tableLayoutPanel15
             // 
-            this.flowLayoutPanel1.Controls.Add(this.splitLine1);
-            this.flowLayoutPanel1.Controls.Add(this.title_label);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(532, 71);
-            this.flowLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel15.ColumnCount = 1;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.Controls.Add(this.tableLayoutPanel4, 0, 2);
+            this.tableLayoutPanel15.Controls.Add(this.tableLayoutPanel1, 0, 1);
+            this.tableLayoutPanel15.Controls.Add(this.tableLayoutPanel16, 0, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 3;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(526, 312);
+            this.tableLayoutPanel15.TabIndex = 1;
+            // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.ColumnCount = 3;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Controls.Add(this.title_label, 0, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 1;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(526, 62);
+            this.tableLayoutPanel16.TabIndex = 5;
             // 
             // MainFrm
             // 
@@ -959,7 +959,6 @@ namespace XE08.Forms
             this.body_tab_layout.ResumeLayout(false);
             this.body_right_tab_layout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.flow_dgv)).EndInit();
-            this.right_top_panel.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -975,7 +974,8 @@ namespace XE08.Forms
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -994,9 +994,7 @@ namespace XE08.Forms
         private System.Windows.Forms.TableLayoutPanel body_right_tab_layout;
         private System.Windows.Forms.DataGridView flow_dgv;
         private System.Windows.Forms.Label title_label;
-        private CustomControls.SplitLine splitLine1;
         private System.Windows.Forms.Timer refresh_timer;
-        private System.Windows.Forms.Panel right_top_panel;
         private System.Windows.Forms.PictureBox logo;
         private DataGridViewTextBoxColumn check_flow_col;
         private DataGridViewTextBoxColumn check_item_col;
@@ -1041,7 +1039,8 @@ namespace XE08.Forms
         private TableLayoutPanel tableLayoutPanel14;
         private Label label24;
         private Label label25;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private TableLayoutPanel tableLayoutPanel15;
+        private TableLayoutPanel tableLayoutPanel16;
     }
 }
 
