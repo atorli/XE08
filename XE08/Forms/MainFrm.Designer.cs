@@ -949,7 +949,7 @@ namespace XE08.Forms
             // title_label
             // 
             this.title_label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.title_label.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.title_label.Font = new System.Drawing.Font("Microsoft YaHei", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.title_label.ForeColor = System.Drawing.Color.Orange;
             this.title_label.Location = new System.Drawing.Point(0, 0);
             this.title_label.Margin = new System.Windows.Forms.Padding(0);
