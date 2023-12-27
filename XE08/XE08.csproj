@@ -172,6 +172,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\1.png" />
     <None Include="Resources\LOGO.png" />
   </ItemGroup>
   <ItemGroup>
