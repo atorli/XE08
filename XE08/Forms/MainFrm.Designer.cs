@@ -53,7 +53,7 @@ namespace XE08.Forms
             this.logo = new System.Windows.Forms.PictureBox();
             this.body = new System.Windows.Forms.Panel();
             this.body_tab_layout = new System.Windows.Forms.TableLayoutPanel();
-            this.body_right_tab_layout = new System.Windows.Forms.TableLayoutPanel();
+            this.body_right = new System.Windows.Forms.TableLayoutPanel();
             this.flow_dgv = new System.Windows.Forms.DataGridView();
             this.check_flow_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.check_item_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,7 +105,7 @@ namespace XE08.Forms
             this.splitLine1 = new XE08.CustomControls.SplitLine();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.body_left = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
@@ -126,7 +126,7 @@ namespace XE08.Forms
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.body.SuspendLayout();
             this.body_tab_layout.SuspendLayout();
-            this.body_right_tab_layout.SuspendLayout();
+            this.body_right.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flow_dgv)).BeginInit();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -145,7 +145,7 @@ namespace XE08.Forms
             this.tableLayoutPanel14.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
-            this.tableLayoutPanel18.SuspendLayout();
+            this.body_left.SuspendLayout();
             this.tableLayoutPanel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tableLayoutPanel20.SuspendLayout();
@@ -267,8 +267,8 @@ namespace XE08.Forms
             this.body_tab_layout.ColumnCount = 2;
             this.body_tab_layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
             this.body_tab_layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.body_tab_layout.Controls.Add(this.body_right_tab_layout, 1, 0);
-            this.body_tab_layout.Controls.Add(this.tableLayoutPanel18, 0, 0);
+            this.body_tab_layout.Controls.Add(this.body_right, 1, 0);
+            this.body_tab_layout.Controls.Add(this.body_left, 0, 0);
             this.body_tab_layout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.body_tab_layout.Location = new System.Drawing.Point(0, 3);
             this.body_tab_layout.Margin = new System.Windows.Forms.Padding(0);
@@ -278,24 +278,24 @@ namespace XE08.Forms
             this.body_tab_layout.Size = new System.Drawing.Size(1182, 636);
             this.body_tab_layout.TabIndex = 1;
             // 
-            // body_right_tab_layout
+            // body_right
             // 
-            this.body_right_tab_layout.ColumnCount = 1;
-            this.body_right_tab_layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.body_right_tab_layout.Controls.Add(this.flow_dgv, 0, 1);
-            this.body_right_tab_layout.Controls.Add(this.tableLayoutPanel15, 0, 0);
-            this.body_right_tab_layout.Controls.Add(this.tableLayoutPanel17, 0, 2);
-            this.body_right_tab_layout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.body_right_tab_layout.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.body_right_tab_layout.Location = new System.Drawing.Point(650, 0);
-            this.body_right_tab_layout.Margin = new System.Windows.Forms.Padding(0);
-            this.body_right_tab_layout.Name = "body_right_tab_layout";
-            this.body_right_tab_layout.RowCount = 3;
-            this.body_right_tab_layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
-            this.body_right_tab_layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
-            this.body_right_tab_layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.body_right_tab_layout.Size = new System.Drawing.Size(532, 636);
-            this.body_right_tab_layout.TabIndex = 0;
+            this.body_right.ColumnCount = 1;
+            this.body_right.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.body_right.Controls.Add(this.flow_dgv, 0, 1);
+            this.body_right.Controls.Add(this.tableLayoutPanel15, 0, 0);
+            this.body_right.Controls.Add(this.tableLayoutPanel17, 0, 2);
+            this.body_right.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.body_right.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.body_right.Location = new System.Drawing.Point(650, 0);
+            this.body_right.Margin = new System.Windows.Forms.Padding(0);
+            this.body_right.Name = "body_right";
+            this.body_right.RowCount = 3;
+            this.body_right.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
+            this.body_right.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
+            this.body_right.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.body_right.Size = new System.Drawing.Size(532, 636);
+            this.body_right.TabIndex = 0;
             // 
             // flow_dgv
             // 
@@ -1016,22 +1016,22 @@ namespace XE08.Forms
             this.label27.Text = "OK";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel18
+            // body_left
             // 
-            this.tableLayoutPanel18.ColumnCount = 2;
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel19, 0, 1);
-            this.tableLayoutPanel18.Controls.Add(this.panel2, 0, 0);
-            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
-            this.tableLayoutPanel18.RowCount = 2;
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(650, 636);
-            this.tableLayoutPanel18.TabIndex = 1;
+            this.body_left.ColumnCount = 2;
+            this.body_left.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.body_left.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.body_left.Controls.Add(this.tableLayoutPanel19, 0, 1);
+            this.body_left.Controls.Add(this.panel2, 0, 0);
+            this.body_left.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.body_left.Location = new System.Drawing.Point(0, 0);
+            this.body_left.Margin = new System.Windows.Forms.Padding(0);
+            this.body_left.Name = "body_left";
+            this.body_left.RowCount = 2;
+            this.body_left.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.body_left.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.body_left.Size = new System.Drawing.Size(650, 636);
+            this.body_left.TabIndex = 1;
             // 
             // tableLayoutPanel19
             // 
@@ -1218,7 +1218,7 @@ namespace XE08.Forms
             // 
             // panel2
             // 
-            this.tableLayoutPanel18.SetColumnSpan(this.panel2, 2);
+            this.body_left.SetColumnSpan(this.panel2, 2);
             this.panel2.Controls.Add(this.tableLayoutPanel21);
             this.panel2.Controls.Add(this.tableLayoutPanel20);
             this.panel2.Controls.Add(this.splitLine2);
@@ -1259,7 +1259,7 @@ namespace XE08.Forms
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.body.ResumeLayout(false);
             this.body_tab_layout.ResumeLayout(false);
-            this.body_right_tab_layout.ResumeLayout(false);
+            this.body_right.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.flow_dgv)).EndInit();
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -1280,7 +1280,7 @@ namespace XE08.Forms
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel17.PerformLayout();
-            this.tableLayoutPanel18.ResumeLayout(false);
+            this.body_left.ResumeLayout(false);
             this.tableLayoutPanel19.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tableLayoutPanel20.ResumeLayout(false);
@@ -1303,7 +1303,7 @@ namespace XE08.Forms
         private System.Windows.Forms.Panel body;
         private CustomControls.SplitLine header_split_line;
         private System.Windows.Forms.TableLayoutPanel body_tab_layout;
-        private System.Windows.Forms.TableLayoutPanel body_right_tab_layout;
+        private System.Windows.Forms.TableLayoutPanel body_right;
         private System.Windows.Forms.DataGridView flow_dgv;
         private System.Windows.Forms.Label title_label;
         private System.Windows.Forms.Timer refresh_timer;
@@ -1357,7 +1357,7 @@ namespace XE08.Forms
         private CustomControls.SplitLine splitLine1;
         private Label label26;
         private Label label27;
-        private TableLayoutPanel tableLayoutPanel18;
+        private TableLayoutPanel body_left;
         private TableLayoutPanel tableLayoutPanel19;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private TableLayoutPanel tableLayoutPanel20;
