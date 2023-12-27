@@ -33,16 +33,6 @@ namespace XE08.Forms
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(-2D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(-1D, 1D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 3D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 4D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 5D);
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -53,6 +43,16 @@ namespace XE08.Forms
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 4D);
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 5D);
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(-2D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(-1D, 1D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 3D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 4D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 5D);
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             this.header = new System.Windows.Forms.Panel();
             this.header_tab_layout = new System.Windows.Forms.TableLayoutPanel();
@@ -108,15 +108,14 @@ namespace XE08.Forms
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.dotLine1 = new XE08.CustomControls.DotLine();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.title_label = new System.Windows.Forms.Label();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.splitLine1 = new XE08.CustomControls.SplitLine();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.body_left = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
@@ -127,10 +126,11 @@ namespace XE08.Forms
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.refresh_timer = new System.Windows.Forms.Timer(this.components);
+            this.dotLine1 = new XE08.CustomControls.DotLine();
+            this.splitLine1 = new XE08.CustomControls.SplitLine();
             this.splitLine2 = new XE08.CustomControls.SplitLine();
             this.header_split_line = new XE08.CustomControls.SplitLine();
-            this.refresh_timer = new System.Windows.Forms.Timer(this.components);
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.header.SuspendLayout();
             this.header_tab_layout.SuspendLayout();
             this.header_right.SuspendLayout();
@@ -158,11 +158,11 @@ namespace XE08.Forms
             this.tableLayoutPanel17.SuspendLayout();
             this.body_left.SuspendLayout();
             this.tableLayoutPanel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel21.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // header
@@ -930,18 +930,6 @@ namespace XE08.Forms
             this.label25.Text = "mm";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dotLine1
-            // 
-            this.dotLine1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dotLine1.DotLineLen = 15;
-            this.dotLine1.DotLineWidth = 1;
-            this.dotLine1.GapLen = 5;
-            this.dotLine1.Location = new System.Drawing.Point(262, 0);
-            this.dotLine1.Margin = new System.Windows.Forms.Padding(0);
-            this.dotLine1.Name = "dotLine1";
-            this.dotLine1.Size = new System.Drawing.Size(1, 179);
-            this.dotLine1.TabIndex = 2;
-            // 
             // tableLayoutPanel16
             // 
             this.tableLayoutPanel16.ColumnCount = 3;
@@ -988,17 +976,6 @@ namespace XE08.Forms
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel17.Size = new System.Drawing.Size(532, 72);
             this.tableLayoutPanel17.TabIndex = 2;
-            // 
-            // splitLine1
-            // 
-            this.splitLine1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.tableLayoutPanel17.SetColumnSpan(this.splitLine1, 2);
-            this.splitLine1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitLine1.Location = new System.Drawing.Point(0, 5);
-            this.splitLine1.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.splitLine1.Name = "splitLine1";
-            this.splitLine1.Size = new System.Drawing.Size(532, 3);
-            this.splitLine1.TabIndex = 0;
             // 
             // label26
             // 
@@ -1061,6 +1038,39 @@ namespace XE08.Forms
             this.tableLayoutPanel19.Size = new System.Drawing.Size(390, 446);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
+            // chart2
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
+            this.chart2.Location = new System.Drawing.Point(3, 226);
+            this.chart2.Name = "chart2";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series2";
+            series1.Points.Add(dataPoint1);
+            series1.Points.Add(dataPoint2);
+            series1.Points.Add(dataPoint3);
+            series1.Points.Add(dataPoint4);
+            series1.Points.Add(dataPoint5);
+            series1.Points.Add(dataPoint6);
+            this.chart2.Series.Add(series1);
+            this.chart2.Size = new System.Drawing.Size(384, 217);
+            this.chart2.TabIndex = 1;
+            this.chart2.Text = "chart2";
+            title1.BackColor = System.Drawing.Color.Transparent;
+            title1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.Weave;
+            title1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Left;
+            title1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "电压";
+            title1.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            this.chart2.Titles.Add(title1);
+            // 
             // chart1
             // 
             chartArea2.Name = "ChartArea1";
@@ -1117,7 +1127,7 @@ namespace XE08.Forms
             this.tableLayoutPanel21.Controls.Add(this.label32, 0, 3);
             this.tableLayoutPanel21.Controls.Add(this.label33, 1, 3);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(351, 0);
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(295, 0);
             this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 5;
@@ -1126,7 +1136,7 @@ namespace XE08.Forms
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(299, 187);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(355, 187);
             this.tableLayoutPanel21.TabIndex = 2;
             // 
             // label30
@@ -1137,7 +1147,7 @@ namespace XE08.Forms
             this.label30.Location = new System.Drawing.Point(0, 28);
             this.label30.Margin = new System.Windows.Forms.Padding(0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(149, 56);
+            this.label30.Size = new System.Drawing.Size(177, 56);
             this.label30.TabIndex = 0;
             this.label30.Text = "合格品数量:";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1148,9 +1158,10 @@ namespace XE08.Forms
             this.label31.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label31.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label31.Location = new System.Drawing.Point(152, 28);
+            this.label31.Location = new System.Drawing.Point(180, 28);
+            this.label31.Margin = new System.Windows.Forms.Padding(3, 0, 30, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(144, 56);
+            this.label31.Size = new System.Drawing.Size(145, 56);
             this.label31.TabIndex = 1;
             this.label31.Text = "245";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1163,7 +1174,7 @@ namespace XE08.Forms
             this.label32.Location = new System.Drawing.Point(0, 102);
             this.label32.Margin = new System.Windows.Forms.Padding(0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(149, 56);
+            this.label32.Size = new System.Drawing.Size(177, 56);
             this.label32.TabIndex = 2;
             this.label32.Text = "不良品数量:";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1175,9 +1186,10 @@ namespace XE08.Forms
             this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label33.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label33.ForeColor = System.Drawing.Color.Red;
-            this.label33.Location = new System.Drawing.Point(152, 102);
+            this.label33.Location = new System.Drawing.Point(180, 102);
+            this.label33.Margin = new System.Windows.Forms.Padding(3, 0, 30, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(144, 56);
+            this.label33.Size = new System.Drawing.Size(145, 56);
             this.label33.TabIndex = 3;
             this.label33.Text = "23";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1197,7 +1209,7 @@ namespace XE08.Forms
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(351, 187);
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(295, 187);
             this.tableLayoutPanel20.TabIndex = 1;
             // 
             // label28
@@ -1208,10 +1220,10 @@ namespace XE08.Forms
             this.label28.Location = new System.Drawing.Point(0, 65);
             this.label28.Margin = new System.Windows.Forms.Padding(0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(175, 56);
+            this.label28.Size = new System.Drawing.Size(147, 56);
             this.label28.TabIndex = 0;
             this.label28.Text = "生产型号:";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label29
             // 
@@ -1219,13 +1231,42 @@ namespace XE08.Forms
             this.label29.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label29.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label29.Location = new System.Drawing.Point(175, 65);
+            this.label29.Location = new System.Drawing.Point(147, 65);
             this.label29.Margin = new System.Windows.Forms.Padding(0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(176, 56);
+            this.label29.Size = new System.Drawing.Size(148, 56);
             this.label29.TabIndex = 1;
             this.label29.Text = "RR_10222";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // refresh_timer
+            // 
+            this.refresh_timer.Enabled = true;
+            this.refresh_timer.Interval = 950;
+            this.refresh_timer.Tick += new System.EventHandler(this.refresh_timer_Tick);
+            // 
+            // dotLine1
+            // 
+            this.dotLine1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dotLine1.DotLineLen = 15;
+            this.dotLine1.DotLineWidth = 1;
+            this.dotLine1.GapLen = 5;
+            this.dotLine1.Location = new System.Drawing.Point(262, 0);
+            this.dotLine1.Margin = new System.Windows.Forms.Padding(0);
+            this.dotLine1.Name = "dotLine1";
+            this.dotLine1.Size = new System.Drawing.Size(1, 179);
+            this.dotLine1.TabIndex = 2;
+            // 
+            // splitLine1
+            // 
+            this.splitLine1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tableLayoutPanel17.SetColumnSpan(this.splitLine1, 2);
+            this.splitLine1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitLine1.Location = new System.Drawing.Point(0, 5);
+            this.splitLine1.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.splitLine1.Name = "splitLine1";
+            this.splitLine1.Size = new System.Drawing.Size(532, 3);
+            this.splitLine1.TabIndex = 0;
             // 
             // splitLine2
             // 
@@ -1244,45 +1285,6 @@ namespace XE08.Forms
             this.header_split_line.Name = "header_split_line";
             this.header_split_line.Size = new System.Drawing.Size(1182, 3);
             this.header_split_line.TabIndex = 0;
-            // 
-            // refresh_timer
-            // 
-            this.refresh_timer.Enabled = true;
-            this.refresh_timer.Interval = 950;
-            this.refresh_timer.Tick += new System.EventHandler(this.refresh_timer_Tick);
-            // 
-            // chart2
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(3, 226);
-            this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series2";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            series1.Points.Add(dataPoint4);
-            series1.Points.Add(dataPoint5);
-            series1.Points.Add(dataPoint6);
-            this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(384, 217);
-            this.chart2.TabIndex = 1;
-            this.chart2.Text = "chart2";
-            title1.BackColor = System.Drawing.Color.Transparent;
-            title1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.Weave;
-            title1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Left;
-            title1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "电压";
-            title1.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            this.chart2.Titles.Add(title1);
             // 
             // MainFrm
             // 
@@ -1328,13 +1330,13 @@ namespace XE08.Forms
             this.tableLayoutPanel17.PerformLayout();
             this.body_left.ResumeLayout(false);
             this.tableLayoutPanel19.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel21.ResumeLayout(false);
             this.tableLayoutPanel21.PerformLayout();
             this.tableLayoutPanel20.ResumeLayout(false);
             this.tableLayoutPanel20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
 
         }
