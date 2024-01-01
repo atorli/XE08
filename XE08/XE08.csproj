@@ -116,6 +116,12 @@
     <Compile Include="CustomControls\DotLine.Designer.cs">
       <DependentUpon>DotLine.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\Mode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\Mode.Designer.cs">
+      <DependentUpon>Mode.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\SplitLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CustomControls\DotLine.resx">
       <DependentUpon>DotLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\Mode.resx">
+      <DependentUpon>Mode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\SplitLine.resx">
       <DependentUpon>SplitLine.cs</DependentUpon>
