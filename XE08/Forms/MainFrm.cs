@@ -27,6 +27,7 @@ namespace XE08.Forms
             this.time_label.Text = time;        
             this.flow_dgv.Rows.Add("工作压紧", "零件存在");
             this.flow_dgv.Rows.Add("工作压紧", "零件存在");
+            this.flow_dgv.Rows[0].Cells[2].Style.ForeColor = Color.Green;
             this.flow_dgv.Rows[1].Cells[2].Style.ForeColor = Color.Red;            
         }
 
