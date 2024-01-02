@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using XE08.CustomControls;
 
 namespace XE08.Forms
 {
@@ -33,6 +34,10 @@ namespace XE08.Forms
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -67,7 +72,7 @@ namespace XE08.Forms
             this.flow_dgv = new System.Windows.Forms.DataGridView();
             this.check_flow_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.check_item_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.state_col = new XE08.CustomControls.DataGridViewStateColumn();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -130,6 +135,7 @@ namespace XE08.Forms
             this.label29 = new System.Windows.Forms.Label();
             this.splitLine2 = new XE08.CustomControls.SplitLine();
             this.header_split_line = new XE08.CustomControls.SplitLine();
+            this.refresh_timer = new System.Windows.Forms.Timer(this.components);
             this.refresh_timer = new System.Windows.Forms.Timer(this.components);
             this.mode1 = new XE08.CustomControls.Mode();
             this.header.SuspendLayout();
@@ -314,23 +320,30 @@ namespace XE08.Forms
             // 
             this.flow_dgv.AllowUserToAddRows = false;
             this.flow_dgv.AllowUserToDeleteRows = false;
-            this.flow_dgv.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.flow_dgv.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.flow_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.flow_dgv.BackgroundColor = System.Drawing.Color.White;
             this.flow_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.flow_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.flow_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.flow_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.flow_dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.flow_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.flow_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.flow_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.flow_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.check_flow_col,
             this.check_item_col,
-            this.status_col});
+            this.state_col});
             this.flow_dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flow_dgv.EnableHeadersVisualStyles = false;
             this.flow_dgv.GridColor = System.Drawing.Color.White;
@@ -340,8 +353,15 @@ namespace XE08.Forms
             this.flow_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.flow_dgv.RowHeadersVisible = false;
             this.flow_dgv.RowHeadersWidth = 51;
-            this.flow_dgv.RowTemplate.Height = 23;
-            this.flow_dgv.Size = new System.Drawing.Size(531, 278);
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.flow_dgv.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.flow_dgv.RowTemplate.Height = 30;
+            this.flow_dgv.RowTemplate.ReadOnly = true;
+            this.flow_dgv.Size = new System.Drawing.Size(532, 282);
             this.flow_dgv.TabIndex = 0;
             this.flow_dgv.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.flow_dgv_CellMouseLeave);
             this.flow_dgv.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.flow_dgv_CellMouseMove);
@@ -349,6 +369,8 @@ namespace XE08.Forms
             // check_flow_col
             // 
             this.check_flow_col.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.check_flow_col.DefaultCellStyle = dataGridViewCellStyle3;
             this.check_flow_col.HeaderText = "检测流程";
             this.check_flow_col.MinimumWidth = 6;
             this.check_flow_col.Name = "check_flow_col";
@@ -362,13 +384,15 @@ namespace XE08.Forms
             this.check_item_col.Name = "check_item_col";
             this.check_item_col.ReadOnly = true;
             // 
-            // status_col
+            // state_col
             // 
-            this.status_col.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.status_col.HeaderText = "状态";
-            this.status_col.MinimumWidth = 6;
-            this.status_col.Name = "status_col";
-            this.status_col.ReadOnly = true;
+            this.state_col.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.state_col.DefaultCellStyle = dataGridViewCellStyle4;
+            this.state_col.HeaderText = "状态";
+            this.state_col.MinimumWidth = 6;
+            this.state_col.Name = "state_col";
+            this.state_col.ReadOnly = true;
             // 
             // tableLayoutPanel15
             // 
@@ -940,7 +964,7 @@ namespace XE08.Forms
             this.dotLine1.Location = new System.Drawing.Point(262, 0);
             this.dotLine1.Margin = new System.Windows.Forms.Padding(0);
             this.dotLine1.Name = "dotLine1";
-            this.dotLine1.Size = new System.Drawing.Size(1, 176);
+            this.dotLine1.Size = new System.Drawing.Size(1, 179);
             this.dotLine1.TabIndex = 2;
             // 
             // tableLayoutPanel16
@@ -998,7 +1022,7 @@ namespace XE08.Forms
             this.splitLine1.Location = new System.Drawing.Point(0, 5);
             this.splitLine1.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.splitLine1.Name = "splitLine1";
-            this.splitLine1.Size = new System.Drawing.Size(531, 3);
+            this.splitLine1.Size = new System.Drawing.Size(532, 3);
             this.splitLine1.TabIndex = 0;
             // 
             // label26
@@ -1288,6 +1312,12 @@ namespace XE08.Forms
             this.refresh_timer.Interval = 950;
             this.refresh_timer.Tick += new System.EventHandler(this.refresh_timer_Tick);
             // 
+            // refresh_timer
+            // 
+            this.refresh_timer.Enabled = true;
+            this.refresh_timer.Interval = 950;
+            this.refresh_timer.Tick += new System.EventHandler(this.refresh_timer_Tick);
+            // 
             // mode1
             // 
             this.mode1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1299,7 +1329,7 @@ namespace XE08.Forms
             // 
             // MainFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1178, 744);
@@ -1310,7 +1340,7 @@ namespace XE08.Forms
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "XE08线末检机";
+            this.Text = "XE08线末检测器";
             this.Load += new System.EventHandler(this.MainFrm_Load);
             this.header.ResumeLayout(false);
             this.header_tab_layout.ResumeLayout(false);
@@ -1368,9 +1398,6 @@ namespace XE08.Forms
         private System.Windows.Forms.Label title_label;
         private System.Windows.Forms.Timer refresh_timer;
         private System.Windows.Forms.PictureBox logo;
-        private DataGridViewTextBoxColumn check_flow_col;
-        private DataGridViewTextBoxColumn check_item_col;
-        private DataGridViewTextBoxColumn status_col;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
@@ -1431,6 +1458,9 @@ namespace XE08.Forms
         private Panel panel2;
         private CustomControls.SplitLine splitLine2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private DataGridViewTextBoxColumn check_flow_col;
+        private DataGridViewTextBoxColumn check_item_col;
+        private DataGridViewStateColumn state_col;
         private CustomControls.Mode mode1;
     }
 }

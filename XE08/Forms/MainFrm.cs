@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using XE08.CustomControls;
 
 namespace XE08.Forms
 {
@@ -23,7 +24,11 @@ namespace XE08.Forms
             string date = now.ToString("yyyy.MM.dd");
             string time = now.ToString("HH:mm:ss");
             this.date_label.Text = date;
-            this.time_label.Text = time;
+            this.time_label.Text = time;        
+            this.flow_dgv.Rows.Add("工作压紧", "零件存在");
+            this.flow_dgv.Rows.Add("工作压紧", "零件存在");
+            this.flow_dgv.Rows[0].Cells[2].Style.ForeColor = Color.Green;
+            this.flow_dgv.Rows[1].Cells[2].Style.ForeColor = Color.Red;            
         }
 
         private void refresh_timer_Tick(object sender, EventArgs e)
@@ -41,7 +46,7 @@ namespace XE08.Forms
             int j = e.ColumnIndex;
             if( i == -1)
             {                
-                flow_dgv.Columns[j].HeaderCell.Style.BackColor = Color.DarkBlue;
+                flow_dgv.Columns[j].HeaderCell.Style.BackColor = Color.SkyBlue;
             }               
         }
 
