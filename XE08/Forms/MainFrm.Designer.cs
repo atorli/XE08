@@ -136,7 +136,6 @@ namespace XE08.Forms
             this.splitLine2 = new XE08.CustomControls.SplitLine();
             this.header_split_line = new XE08.CustomControls.SplitLine();
             this.refresh_timer = new System.Windows.Forms.Timer(this.components);
-            this.refresh_timer = new System.Windows.Forms.Timer(this.components);
             this.mode1 = new XE08.CustomControls.Mode();
             this.header.SuspendLayout();
             this.header_tab_layout.SuspendLayout();
@@ -1305,12 +1304,6 @@ namespace XE08.Forms
             this.header_split_line.Name = "header_split_line";
             this.header_split_line.Size = new System.Drawing.Size(1178, 3);
             this.header_split_line.TabIndex = 0;
-            // 
-            // refresh_timer
-            // 
-            this.refresh_timer.Enabled = true;
-            this.refresh_timer.Interval = 950;
-            this.refresh_timer.Tick += new System.EventHandler(this.refresh_timer_Tick);
             // 
             // refresh_timer
             // 
