@@ -110,6 +110,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControls\DataGridViewStateCell .cs" />
+    <Compile Include="CustomControls\DataGridViewStateColumn.cs" />
     <Compile Include="CustomControls\DotLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
